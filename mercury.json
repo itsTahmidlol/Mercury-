@@ -1,0 +1,13 @@
+{
+    "token" : "",
+    "keeping_bot_alive" : true,
+    "prefix" : "$",
+    
+    "channel_list" : [
+
+    ],
+
+    "message_list" : [
+
+    ]
+}
