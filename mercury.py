@@ -242,6 +242,7 @@ async def iplocate(ctx, ip = None, gmap = "None"):
     x_ = requests.get("https://extreme-ip-lookup.com/")
     if x_.status_code == 404:
         embed = discord.Embed(title="Error!", description="Website is Down.", color=r_color(), timestamp=ctx.message.created_at)
+        await ctx.send(embed=embed)
     else:
         if ip is None:
             embed = discord.Embed(title="Error!", description="Provide an IP", color=r_color(), timestamp=ctx.message.created_at)
@@ -403,8 +404,8 @@ async def activity(ctx, type, *, text):
         await ctx.send(embed=embed, delete_after=dat)
 
 # ----------- Keeping the Bot Alive ----------------- #
-if keep is True:
-    keep_alive()
+if keep: #Keeping this False may cause glitch in replit
+    keep_alive() 
 else:
     pass
 
